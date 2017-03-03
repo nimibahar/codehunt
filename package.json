@@ -1,0 +1,14 @@
+{
+  "name": "codehunt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/express-server.js"
+  },
+  "author": "Nimi-Nim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.0"
+  }
+}
