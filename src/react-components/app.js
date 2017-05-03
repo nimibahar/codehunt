@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import HomePage from './HomePage';
 
 class App extends Component {
   constructor() {
@@ -8,7 +9,7 @@ class App extends Component {
 
   render() {
     return (
-      <h2>Initial App component</h2>
+      <HomePage/>
     );
   }
 }
