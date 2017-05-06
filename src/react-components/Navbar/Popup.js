@@ -7,8 +7,8 @@ class Popup extends Component {
         <section className="popup-wrapup">
           <img src="/img/close.png" onClick={this.props.hidePopUp} />
         </section>
-        <section className="popup-content">
-          <section>POPUP CONTENT SHOULD BE HERE</section>
+        <section className={"popup-content " + this.props.style}>
+          <section>{this.props.children}</section>
         </section>
       </section>
     );
