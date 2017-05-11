@@ -46,7 +46,7 @@ class Navbar extends Component {
 
           ?
 
-          //Display Post link here
+          //If this.props.user === true then Display Post link here
           <section>
             <span>
               <a href="#" onClick={this.showPopUp} className="login-btn">POST</a>
@@ -56,7 +56,7 @@ class Navbar extends Component {
 
           :
 
-          //Display login link here
+          //If this.props.user !== true then Display login link here
           <section>
             <span>
               <a href="#" onClick={this.showPopUp} className="login-btn">LOGIN</a>

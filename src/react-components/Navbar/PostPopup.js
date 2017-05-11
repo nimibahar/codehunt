@@ -11,7 +11,7 @@ class PostPopup extends Component {
   render() {
     return(
       <Popup {...this.props} style="post-popup">
-        <header>Post a new Product</header>
+        <header className="post-header">Post a new Product</header>
         <section>
           <table>
             <tbody>

@@ -20438,29 +20438,35 @@ var LoginPopup = function (_Component) {
   _createClass(LoginPopup, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
-        _Popup2.default,
-        _extends({}, this.props, { style: 'login-popup' }),
-        _react2.default.createElement('img', { src: './img/kitty.png' }),
+      return (
+        // the ...this.props is just a shortcut
+        // it means pass all the props of the
+        // LoginPopup Component. it can also be:
+        // status={this.props.status} hidePopUp={this.props.hidePopUp}
         _react2.default.createElement(
-          'h2',
-          null,
-          'Login to join the community'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Codehunt is a community to geek out and share about the latest code, podecast and new code stuff '
-        ),
-        _react2.default.createElement(
-          'button',
-          { className: 'facebook-btn' },
-          'Login with Facebook'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'We\'ll never post anything without your permission.'
+          _Popup2.default,
+          _extends({}, this.props, { style: 'login-popup' }),
+          _react2.default.createElement('img', { src: './img/kitty.png' }),
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Login to join the community'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Codehunt is a community to geek out and share about the latest code, podecast and new code stuff '
+          ),
+          _react2.default.createElement(
+            'button',
+            { className: 'facebook-btn' },
+            'Login with Facebook'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'We\'ll never post anything without your permission.'
+          )
         )
       );
     }
@@ -20591,7 +20597,7 @@ var PostPopup = function (_Component) {
         _extends({}, this.props, { style: 'post-popup' }),
         _react2.default.createElement(
           'header',
-          null,
+          { className: 'post-header' },
           'Post a new Product'
         ),
         _react2.default.createElement(
@@ -20762,7 +20768,7 @@ var Navbar = function (_Component) {
         { className: 'right-side' },
         this.props.user ?
 
-        //Display Post link here
+        //If this.props.user === true then Display Post link here
         _react2.default.createElement(
           'section',
           null,
@@ -20778,7 +20784,7 @@ var Navbar = function (_Component) {
           _react2.default.createElement(_PostPopup2.default, { status: this.state.popUpStatus, hidePopUp: this.hidePopUp })
         ) :
 
-        //Display login link here
+        //If this.props.user !== true then Display login link here
         _react2.default.createElement(
           'section',
           null,
