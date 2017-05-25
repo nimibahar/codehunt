@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import ProductList from '../Product/ProductList.js'
 
 class HomePage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       productList: [
