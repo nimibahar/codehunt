@@ -21144,7 +21144,16 @@ var ProductPopup = function (_Component) {
           name: 'leo',
           avatar: '/img/leo.jpeg'
         }
-      }
+      },
+      comments: [{
+        name: "Leo",
+        avatar: '/img/leo.jpeg',
+        content: "I love this product"
+      }, {
+        name: "Jonny",
+        avatar: '/img/hieu.jpeg',
+        content: "Me 2!"
+      }]
     };
     return _this;
   }
@@ -21211,7 +21220,8 @@ var ProductPopup = function (_Component) {
           { className: 'post-comment' },
           _react2.default.createElement('img', { src: '/img/leo.jpeg', className: 'medium-avatar' }),
           _react2.default.createElement('input', { placeholder: 'What do you think about this product?' })
-        )
+        ),
+        this.renderComments()
       );
     }
   }, {
@@ -21225,6 +21235,35 @@ var ProductPopup = function (_Component) {
           null,
           this.renderBodyDiscussion()
         )
+      );
+    }
+  }, {
+    key: 'renderComments',
+    value: function renderComments() {
+      return _react2.default.createElement(
+        'ul',
+        { className: 'comments-list' },
+        this.state.comments.map(function (comment, idx) {
+          return _react2.default.createElement(
+            'li',
+            { key: idx },
+            _react2.default.createElement('img', { src: comment.avatar, className: 'medium-avatar' }),
+            _react2.default.createElement(
+              'section',
+              null,
+              _react2.default.createElement(
+                'strong',
+                null,
+                comment.name
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                comment.content
+              )
+            )
+          );
+        })
       );
     }
   }, {
