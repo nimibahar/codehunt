@@ -5,7 +5,7 @@ class Popup extends Component {
     return (
       <section className="popup">
         <section className="popup-wrapup">
-          <img src="/img/close.png" onClick={this.props.hidePopUp} />
+          <img src="/img/close.png" onClick={this.props.hidePopup} />
         </section>
         <section className={"popup-content " + this.props.style}>
           <section>{this.props.children}</section>

@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
+import ProductPopup from './ProductPopup.js';
 
-class ProdcutItem extends Component {
+class ProductItem extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      productPopupStatus: false
+    }
+  }
+
+  showProductPopup = () => {
+    this.setState({productPopupStatus: true});
+  }
+
+  hideProductPopup = () => {
+    this.setState({productPopupStatus: false});
+  }
+
   renderUpvoteButton() {
     return (
       <a className="upvote-button" href="#">
@@ -25,7 +42,7 @@ class ProdcutItem extends Component {
   renderInfoSession() {
     return (
       <section className="product-item-info">
-        <a href="#">
+        <a href="#" onClick={this.showProductPopup} >
           <h2>{this.props.name}</h2>
         </a>
         <p>{this.props.description}</p>
@@ -43,9 +60,10 @@ class ProdcutItem extends Component {
         <img className="product-item-media" src={this.props.media} />
         {this.renderInfoSession()}
         {this.renderWindowIcon()}
+        <ProductPopup status={this.state.productPopupStatus} hidePopup={this.hideProductPopup} />
       </li>
     );
   }
 }
 
-export default ProdcutItem;
+export default ProductItem;

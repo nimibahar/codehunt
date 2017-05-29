@@ -12,14 +12,14 @@ class Navbar extends Component {
     };
 
     this.showPopUp = this.showPopUp.bind(this);
-    this.hidePopUp = this.hidePopUp.bind(this);
+    this.hidePopup = this.hidePopup.bind(this);
   }
 
   showPopUp() {
     return this.setState({popUpStatus: true});
   };
 
-  hidePopUp() {
+  hidePopup() {
     return this.setState({popUpStatus: false});
   };
 
@@ -53,7 +53,7 @@ class Navbar extends Component {
               <a href="#" onClick={this.showPopUp} className="login-btn">POST</a>
               <ProfileMenu />
             </span>
-            <PostPopup status={this.state.popUpStatus} hidePopUp={this.hidePopUp} />
+            <PostPopup status={this.state.popUpStatus} hidePopup={this.hidePopup} />
           </section>
 
           :
@@ -63,7 +63,7 @@ class Navbar extends Component {
             <span>
               <a href="#" onClick={this.showPopUp} className="login-btn">LOGIN</a>
             </span>
-            <LoginPopup status={this.state.popUpStatus} hidePopUp={this.hidePopUp}/>
+            <LoginPopup status={this.state.popUpStatus} hidePopup={this.hidePopup}/>
           </section>
         }
       </section>
