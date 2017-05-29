@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <section>
-        <Navbar user={true}/>
+        <Navbar user={false}/>
         <HomePage/>
       </section>
     );
